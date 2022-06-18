@@ -5,9 +5,10 @@ import {
  } from "./updateCustomProperty.js"
  
  const SPEED = 0.04;
- const CACTUS_INTERVAL_MIN = 800
+ const CACTUS_INTERVAL_MIN = 300
  const CACTUS_INTERVAL_MAX = 2000
- const worldElem = document.querySelector("[data-world]")
+ const worldElement = document.querySelector("[data-world]")
+
  
  let nextCactusTime
  export function setupCactus() {
@@ -45,9 +46,11 @@ import {
    cactus.src = "imgs/cactus.png"
    cactus.classList.add("cactus")
    setCustomProperty(cactus, "--left", 100)
-   worldElem.append(cactus)
+   worldElement.append(cactus)
  }
  
  function randomNumberBetween(min, max) {
    return Math.floor(Math.random() * (max - min + 1) + min)
  }
+
+ function updateHighscore()

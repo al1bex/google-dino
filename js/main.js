@@ -65,11 +65,11 @@ document.addEventListener("keydown", handleStart, {once: true});
 
 function handleStart() {
    lastTime = 0;
-   speedScale = 0.85;
+   speedScale = 0.95;
    score = 0;
    setupGround();
    setupDino();
-   setupCactus()
+   setupCactus();
    startScreenElement.classList.add('hide')
    window.requestAnimationFrame(update);
 }
